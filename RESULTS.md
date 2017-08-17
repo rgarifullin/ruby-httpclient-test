@@ -109,3 +109,28 @@ Comparison:
           RESTClient:        7.8 i/s - 3.48x  slower
              Faraday:        7.3 i/s - 3.69x  slower
 ```
+
+### Additional
+#### HTTP methods comparison (via Ethon)
+```
+$ ruby ethon_benchmark.rb
+Warming up --------------------------------------
+                 GET    79.000  i/100ms
+                POST    74.000  i/100ms
+                 PUT    84.000  i/100ms
+               PATCH    88.000  i/100ms
+              DELETE    86.000  i/100ms
+Calculating -------------------------------------
+                 GET    712.364  (±13.2%) i/s -      3.555k in   5.106277s
+                POST    712.900  (± 7.0%) i/s -      3.552k in   5.009760s
+                 PUT    719.741  (± 7.4%) i/s -      3.612k in   5.047622s
+               PATCH    882.489  (± 5.2%) i/s -      4.488k in   5.100175s
+              DELETE    902.279  (± 6.9%) i/s -      4.558k in   5.074961s
+
+Comparison:
+              DELETE:      902.3 i/s
+               PATCH:      882.5 i/s - same-ish: difference falls within error
+                 PUT:      719.7 i/s - 1.25x  slower
+                POST:      712.9 i/s - 1.27x  slower
+                 GET:      712.4 i/s - 1.27x  slower
+```
