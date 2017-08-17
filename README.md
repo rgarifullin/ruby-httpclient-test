@@ -20,6 +20,6 @@
 * Wrest 2.2.0
 
 ## Results
-Ethon & Patron shows best performance (because they wrap libcurl). Other libraries about 3-3.5 times slower.
+Ethon & Patron show best performance (because they wrap libcurl). Other libraries about 3-3.5 times slower.
 
 See [RESULTS.md](RESULTS.md) for full benchmark outputs
