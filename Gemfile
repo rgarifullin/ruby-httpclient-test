@@ -1,0 +1,17 @@
+source 'https://rubygems.org'
+
+gem 'puma'
+gem 'sinatra'
+
+gem 'curb'
+gem 'em-http-request'
+gem 'ethon'
+gem 'excon'
+gem 'faraday'
+gem 'httpi'
+gem 'httparty'
+gem 'httpclient'
+gem 'nestful'
+gem 'patron'
+gem 'rest-client'
+gem 'wrest'
