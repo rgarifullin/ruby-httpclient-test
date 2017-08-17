@@ -1,7 +1,9 @@
 require 'sinatra'
 
-get '/api/v1/ping' do
-  content_type :json
+%i[get post put patch delete].each do |meth|
+  send(meth, "/api/v1/#{meth}") do
+    content_type :json
 
-  JSON.dump(nil)
+    JSON.dump(nil)
+  end
 end
