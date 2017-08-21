@@ -4,22 +4,40 @@ require_relative 'base'
 module EthonInvoker
   include Base
 
-  def self.call
-    easy = Ethon::Easy.new
-
+  def self.get
     easy.http_request(GET, :get)
-    easy.perform
+    perform
+  end
 
+  def self.post
     easy.http_request(POST, :post)
-    easy.perform
+    perform
+  end
 
+  def self.put
     easy.http_request(PUT, :put)
-    easy.perform
+    perform
+  end
 
+  def self.patch
     easy.http_request(PATCH, :patch)
-    easy.perform
+    perform
+  end
 
+  def self.delete
     easy.http_request(DELETE, :delete)
+    perform
+  end
+
+  def self.perform
     easy.perform
+  end
+
+  private
+
+  class << self
+    def easy
+      @easy ||= Ethon::Easy.new
+    end
   end
 end

@@ -4,15 +4,15 @@ require_relative 'clients'
 module Bench
   def self.run
     Benchmark.ips do |x|
-      x.report('Net::HTTP') { NetHTTPInvoker.call }
-      x.report('Curb') { CurbInvoker.call }
-      x.report('Ethon') { EthonInvoker.call }
-      x.report('Excon') { ExconInvoker.call }
-      x.report('Faraday') { FaradayInvoker.call }
-      x.report('HTTParty') { HTTPartyInvoker.call }
-      x.report('Patron') { PatronInvoker.call }
-      x.report('RESTClient') { RestClientInvoker.call }
-      x.report('Wrest') { WrestInvoker.call }
+      x.report('Net::HTTP') { NetHTTPInvoker.all }
+      x.report('Curb') { CurbInvoker.all }
+      x.report('Ethon') { EthonInvoker.all }
+      x.report('Excon') { ExconInvoker.all }
+      x.report('Faraday') { FaradayInvoker.all }
+      x.report('HTTParty') { HTTPartyInvoker.all }
+      x.report('Patron') { PatronInvoker.all }
+      x.report('RESTClient') { RestClientInvoker.all }
+      x.report('Wrest') { WrestInvoker.all }
 
       x.compare!
     end
