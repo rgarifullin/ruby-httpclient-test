@@ -39,7 +39,7 @@ Comparison:
 
 ### Second run
 ```
-rinat@workstation:~/projects/ruby-httpclient-test$ ruby benchmark.rb          
+$ ruby benchmark.rb          
 Warming up --------------------------------------
            Net::HTTP     1.000  i/100ms
                 Curb     1.000  i/100ms
